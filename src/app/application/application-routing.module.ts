@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
 import {LayoutComponent} from "../_shared/components/layout/layout.component";
+import {MenuModule} from "./menu/menu.module";
 
 const routes : Routes =[
   {
     path : "",
     component : LayoutComponent,
     children :[
-      //{path :"admin" , component : }
+      {path :"Menu" , loadChildren : () => import('./menu/menu.module').then(m => m.MenuModule)}
     ]
   }
 ]
@@ -16,7 +16,8 @@ const routes : Routes =[
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MenuModule,
   ],
   exports :[RouterModule]
 })
