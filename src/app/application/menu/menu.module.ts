@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MenuRoutingModule } from './menu-routing.module';
-import { ContainerMenuComponent } from './container-menu/container-menu.component';
-import { ListOfProductsComponent } from './list-of-products/list-of-products.component';
-import { ListOfMenusComponent } from './list-of-menus/list-of-menus.component';
+import { ContainerListOfMenuComponent } from './container-list-of-menu/container-list-of-menu.component';
+import {ListOfMenusComponent} from "./container-list-of-menu/list-of-menus/list-of-menus.component";
 
 
 @NgModule({
   declarations: [
-    ContainerMenuComponent,
-    ListOfProductsComponent,
-    ListOfMenusComponent
+    ListOfMenusComponent,
+    ContainerListOfMenuComponent
   ],
   imports: [
     CommonModule,
