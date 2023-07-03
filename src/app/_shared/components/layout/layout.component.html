@@ -1,7 +1,13 @@
-   <app-side-bar></app-side-bar>
-   <app-nav-bar></app-nav-bar>
-   <div class="p-4 ml-64">
-     <div class="p-4 mt-5">
-      <router-outlet></router-outlet>
+
+   <div class="flex">
+     <!-- BEGIN: Side Menu -->
+     <app-side-bar></app-side-bar>
+
+     <div class="content w-4/5">
+       <!-- BEGIN: Top Bar -->
+       <app-nav-bar></app-nav-bar>
+       <!-- END: Top Bar -->
+       <router-outlet></router-outlet>
+     </div>
+     <!-- END: Content -->
    </div>
-  </div>
