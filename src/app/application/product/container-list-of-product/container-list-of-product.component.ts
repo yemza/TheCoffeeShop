@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from "../../../_core/services/product.service";
+import {MenuItemDTO} from "../../../_core/models/menu-item-dto";
 
 @Component({
   selector: 'app-container-list-of-product',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerListOfProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
+    this.getAllProduct();
   }
 
+
+  /**
+   * get Alll Product
+   * */
+  getAllProduct():void{
+    this.productService.getAllProducts().subscribe((response : MenuItemDTO[])=>{
+      console.log(response);
+    })
+  }
 }

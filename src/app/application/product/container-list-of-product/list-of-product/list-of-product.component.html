@@ -1,54 +1,126 @@
-
-<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-    <tr>
-      <th scope="col" class="px-6 py-3">
-        name
-      </th>
-      <th scope="col" class="px-6 py-3">
-        Ingredient
-      </th>
-      <th scope="col" class="px-6 py-3">
-        Category Name
-      </th>
-      <th scope="col" class="px-6 py-3">
+<div
+  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
+  [ngClass]="color === 'light' ? 'bg-white' : 'bg-red-900 text-white'"
+>
+  <div class="rounded-t mb-0 px-4 py-3 border-0">
+    <div class="flex flex-wrap items-center">
+      <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+        <h3
+          class="font-semibold text-lg"
+          [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'"
+        >
+          Products
+        </h3>
+      </div>
+      <div class="relative flex-justify-end">
+        <input type="text" id="table-search-users" class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for users">
+      </div>
+    </div>
+  </div>
+  <div class="block w-full overflow-x-auto">
+    <!-- Projects table -->
+    <table class="items-center w-full bg-transparent border-collapse">
+      <thead>
+      <tr>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+          [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            "
+        >
+          Name
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+          [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            "
+        >
+          Category
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+          [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            "
+        >
+          size
+        </th>
+        <th
+        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+        [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            "
+      >
         price
       </th>
-      <th scope="col" class="px-6 py-3">
-        size
-      </th>
-      <th scope="col" class="px-6 py-3">
-        Action
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-      <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-        <img class="w-10 h-10 rounded-full" src="/docs/images/people/profile-picture-1.jpg" alt="Jese image">
-        <div class="pl-3">
-          <div class="text-base font-semibold">Neil Sims</div>
-          <div class="font-normal text-gray-500">neil.sims@flowbite.com</div>
-        </div>
-      </th>
-      <td class="px-6 py-4">
-        React Developer
-      </td>
-      <td class="px-6 py-4">
-        React Developer
-      </td>
-      <td class="px-6 py-4">
-        React Developer
-      </td>
-      <td class="px-6 py-4">
-        <div class="flex items-center">
-          <div class="h-2.5 w-2.5 rounded-full bg-green-500 mr-2"></div> Online
-        </div>
-      </td>
-      <td class="px-6 py-4">
-        <!-- Modal toggle -->
-        <a href="#" type="button" data-modal-target="editUserModal" data-modal-show="editUserModal" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit user</a>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+          [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            "
+        >
+          Actions
+        </th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
+        >
+          <img
+            src="assets/img/bootstrap.jpg"
+            class="h-12 w-12 bg-white rounded-full border"
+            alt="..."
+          />
+          <span
+            class="ml-3 font-bold"
+            [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
+          >
+              Argon Design System
+            </span>
+        </th>
+        <td
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+        >
+          $2,500 USD
+        </td>
+        <td
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+        >
+          $2,500 USD
+        </td>
+        <td
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+        >
+          $2,500 USD
+        </td>
+        <td
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-base whitespace-nowrap p-4"
+        >
+          <a class="text-red-600">
+            <i class="fa-regular fa-trash-can mr-3"></i>
+          </a>
+          <a class="text-blue-600">
+            <i class="fa-regular fa-pen-to-square"></i>
+          </a>
+        </td>
+
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,13 +1,11 @@
-
-   <div class="flex">
-     <!-- BEGIN: Side Menu -->
-     <app-side-bar></app-side-bar>
-
-     <div class="content w-4/5">
-       <!-- BEGIN: Top Bar -->
-       <app-nav-bar></app-nav-bar>
-       <!-- END: Top Bar -->
-       <router-outlet></router-outlet>
-     </div>
-     <!-- END: Content -->
-   </div>
+<div>
+  <app-side-bar></app-side-bar>
+  <div class="md:ml-64 bg-blueGray-100 w-4/5 ">
+    <app-nav-bar></app-nav-bar>
+<!--    <app-header-stats></app-header-stats>-->
+    <div class=" fixed md:pl-10 mx-auto  w-4/5 -m-24 mt-20">
+      <router-outlet></router-outlet>
+<!--      <app-footer-admin></app-footer-admin>-->
+    </div>
+  </div>
+</div>
