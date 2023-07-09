@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {MenuItemDTO} from "../../../../_core/models/menu-item-dto";
 
 @Component({
   selector: 'app-list-of-product',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListOfProductComponent implements OnInit {
   color = 'light';
+  @Input() listProduct : MenuItemDTO[]=[];
   constructor() { }
 
   ngOnInit(): void {

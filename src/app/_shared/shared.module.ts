@@ -4,6 +4,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {RouterModule} from "@angular/router";
+import {ImageDecoderPipe} from "./pipes/image-decoder.pipe";
 
 
 
@@ -11,7 +12,8 @@ import {RouterModule} from "@angular/router";
   declarations: [
     SideBarComponent,
     LayoutComponent,
-    NavBarComponent
+    NavBarComponent,
+    ImageDecoderPipe
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,7 @@ import {RouterModule} from "@angular/router";
 
   ],
   exports :[
-
+    ImageDecoderPipe
   ]
 })
 export class SharedModule { }

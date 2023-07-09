@@ -21,7 +21,7 @@
     <!-- Projects table -->
     <table class="items-center w-full bg-transparent border-collapse">
       <thead>
-      <tr>
+      <tr >
         <th
           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
           [ngClass]="
@@ -72,55 +72,54 @@
         >
           Actions
         </th>
-
       </tr>
       </thead>
-      <tbody>
-      <tr>
-        <th
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-        >
-          <img
-            src="assets/img/bootstrap.jpg"
-            class="h-12 w-12 bg-white rounded-full border"
-            alt="..."
-          />
-          <span
-            class="ml-3 font-bold"
-            [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
+      <tbody *ngFor="let product of listProduct">
+        <tr >
+          <th
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
           >
-              Argon Design System
+            <img
+              [src]="product.itemImage"
+              class="h-12 w-12 bg-white rounded-full border"
+              alt="..."
+            />
+            <span
+              class="ml-3 font-bold"
+              [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
+            >
+              {{product.name}}
             </span>
-        </th>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          $2,500 USD
-        </td>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          $2,500 USD
-        </td>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          $2,500 USD
-        </td>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-base whitespace-nowrap p-4"
-        >
-          <a class="text-red-600">
-            <i class="fa-regular fa-trash-can mr-3"></i>
-          </a>
-          <a class="text-blue-600">
-            <i class="fa-regular fa-pen-to-square"></i>
-          </a>
-        </td>
+          </th>
+          <td
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+          >
+            {{product.menuCategoryDTO.nameMenuCategory}}
+          </td>
+          <td
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+          >
 
-      </tr>
 
+          </td>
+          <td
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+          >
+            $2,500 USD
+          </td>
+          <td
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-base whitespace-nowrap p-4"
+          >
+            <a class="text-red-600">
+              <i class="fa-regular fa-trash-can mr-3"></i>
+            </a>
+            <a class="text-blue-600">
+              <i class="fa-regular fa-pen-to-square"></i>
+            </a>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
 </div>
+

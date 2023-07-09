@@ -5,6 +5,7 @@ import {MenuCategoryDTO} from "./menu-category-dto";
 export interface MenuItemDTO {
   idMenuItem: number;
   name: string;
+  itemImage :string
   ingredient: string;
   menuItemDetailsDTO: MenuItemDetailsDTO[];
   menuCategoryDTO: MenuCategoryDTO;

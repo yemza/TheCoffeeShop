@@ -8,7 +8,7 @@ import {MenuItemDTO} from "../../../_core/models/menu-item-dto";
   styleUrls: ['./container-list-of-product.component.css']
 })
 export class ContainerListOfProductComponent implements OnInit {
-
+    listProduct : MenuItemDTO[] =[];
   constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class ContainerListOfProductComponent implements OnInit {
    * */
   getAllProduct():void{
     this.productService.getAllProducts().subscribe((response : MenuItemDTO[])=>{
-      console.log(response);
+      this.listProduct = response
     })
   }
 }
