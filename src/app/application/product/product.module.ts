@@ -4,16 +4,18 @@ import { ContainerListOfProductComponent } from './container-list-of-product/con
 import {ListOfProductComponent} from "./container-list-of-product/list-of-product/list-of-product.component";
 import {ProductRoutingModule} from "./product-routing.module";
 import {SharedModule} from "../../_shared/shared.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     ContainerListOfProductComponent,
     ListOfProductComponent
   ],
-  imports: [
-    CommonModule,
-    ProductRoutingModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        ProductRoutingModule,
+        SharedModule,
+        FormsModule
+    ]
 })
 export class ProductModule { }
